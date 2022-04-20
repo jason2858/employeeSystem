@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+
+    <!-- Console Appender -->
+    <Appenders>
+       <Console name="Console" target="SYSTEM_OUT">
+         <PatternLayout pattern="%d [%p] %c{1} – %m%n" />
+         <ThresholdFilter level="trace" onMatch="ACCEPT" />
+       </Console>
+       <!-- Rolling File Appender -->
+       <RollingFile name="RollingFile">
+           <FileName>/var/lib/tomcat9/logs/YeseeGov.log</FileName>
+           <FilePattern>/var/lib/tomcat9/logs/YeseeGovLog-%d{yyyy-MM-dd}-%i.log</FilePattern>
+           <PatternLayout>
+               <Pattern>%d [%p] %c{1} – %m%n</Pattern>
+           </PatternLayout>
+       <Policies>
+          <TimeBasedTriggeringPolicy interval="1" modulate="true" />
+       </Policies>
+       </RollingFile>
+    </Appenders>
+
+    <Loggers>
+       <Root level="info">
+         <AppenderRef ref="Console" />
+         <AppenderRef ref="RollingFile" />
+       </Root>
+       <logger name="org.springframework.web.servlet.DispatcherServlet" level="info" additivity="false">
+		  <appender-ref ref="Console" />
+          <AppenderRef ref="RollingFile" />
+	   </logger>
+    </Loggers>
+
+</Configuration>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD//EN" 
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+    	<property name="hibernate.connection.provider_class">org.hibernate.c3p0.internal.C3P0ConnectionProvider</property>
+    	<property name="hibernate.c3p0.initialPoolSize">10</property>
+    	<property name="hibernate.c3p0.min_size">10</property>
+    	<property name="hibernate.c3p0.max_size">150</property>
+    	<property name="hibernate.c3p0.timeout">15</property>
+    	<property name="hibernate.c3p0.acquire_increment">2</property>
+        <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://125.228.207.157:3306/yesee?serverTimezone=GMT%2B8&amp;characterEncoding=utf-8&amp;useSSL=false&amp;allowPublicKeyRetrieval=true</property>
+        <property name="hibernate.connection.username">yesee</property>
+        <property name="hibernate.connection.password">yesee@24774948</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="person">true</property>
+        <!-- <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property> -->
+        <property name="hibernate.current_session_context_class">thread</property>
+        <property name="hibernate.jdbc.fetch_size">50</property>
+        <property name="hibernate.query.plan_cache_max_size">128</property>
+        <property name="hibernate.query.plan_parameter_metadata_max_size">16</property>
+        <property name="hibernate.query.in_clause_parameter_padding">true</property>
+        <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+		<property name="sign_user"></property>
+        
+        <mapping class="com.yesee.gov.website.model.TbPunchRecords" />
+        <mapping class="com.yesee.gov.website.model.TbSchedules" />
+        <mapping class="com.yesee.gov.website.model.TbEmployees" />
+        <mapping class="com.yesee.gov.website.model.TbFunction" />
+        <mapping class="com.yesee.gov.website.model.TbGroup" />
+        <mapping class="com.yesee.gov.website.model.TbGroupFunction" />
+		<mapping class="com.yesee.gov.website.model.TbHolidayEvent" />
+        <mapping class="com.yesee.gov.website.model.TbProject" />
+        <mapping class="com.yesee.gov.website.model.TbDepartment" />
+        <mapping class="com.yesee.gov.website.model.TbPreference" />
+        <mapping class="com.yesee.gov.website.model.TbProjectAssist" />
+        <mapping class="com.yesee.gov.website.model.TbProjectType" />
+        <mapping class="com.yesee.gov.website.model.TbRejectCode" />
+        <mapping class="com.yesee.gov.website.model.TbSignCode" />
+		<mapping class="com.yesee.gov.website.model.TbDeleteCode" />
+        <mapping class="com.yesee.gov.website.model.TbAnnualLeave" />
+        <mapping class="com.yesee.gov.website.model.TbScheduledLeave" />
+        <mapping class="com.yesee.gov.website.model.TbWorkItem" />
+        <mapping class="com.yesee.gov.website.model.TbConfig" />
+        <mapping class="com.yesee.gov.website.model.TbCompany" />
+        <mapping class="com.yesee.gov.website.model.TbCustomer" />
+        <mapping class="com.yesee.gov.website.model.TbAnnounce" />
+        <mapping class="com.yesee.gov.website.model.TbAnnounceDoc" />
+        <mapping class="com.yesee.gov.website.model.TbProjectMember" />
+        <mapping class="com.yesee.gov.website.model.TbProjectItem" />
+        <mapping class="com.yesee.gov.website.model.TbProjectItemSort" />		
+		<mapping class="com.yesee.gov.website.model.TbPunchHistory" />
+		<mapping class="com.yesee.gov.website.model.VTbSchedules" />
+		<mapping class="com.yesee.gov.website.model.VTbPunchHistory" />
+		<mapping class="com.yesee.gov.website.model.accounting.TbAccountingBalance" />
+	    <mapping class="com.yesee.gov.website.model.accounting.TbAccountingClass" />
+	    <mapping class="com.yesee.gov.website.model.accounting.TbAccountingClosed" />
+		<mapping class="com.yesee.gov.website.model.accounting.TbAClassItem" />
+		<mapping class="com.yesee.gov.website.model.accounting.TbHedge" />
+		<mapping class="com.yesee.gov.website.model.accounting.TbHedgeDelHistory" />
+		<mapping class="com.yesee.gov.website.model.accounting.TbSignCommon" />
+		<mapping class="com.yesee.gov.website.model.accounting.TbSignCommonSet" />
+		<mapping class="com.yesee.gov.website.model.accounting.TbSignRole" />
+		<mapping class="com.yesee.gov.website.model.accounting.TbVoucherCommon" />			
+		<mapping class="com.yesee.gov.website.model.accounting.TbVoucherDetail" />
+		<mapping class="com.yesee.gov.website.model.accounting.TbVoucherHead" />
+		<mapping class="com.yesee.gov.website.model.accounting.TbVoucherHedge" />
+		<mapping class="com.yesee.gov.website.model.accounting.TbVoucherHistory" />
+		<mapping class="com.yesee.gov.website.model.accounting.TbVoucherModifyAuth" />
+		<mapping class="com.yesee.gov.website.model.accounting.TbVoucherSign" />
+		<mapping class="com.yesee.gov.website.model.accounting.VTbVoucherDetail" />
+		<mapping class="com.yesee.gov.website.model.accounting.VTbVoucherHedge" />
+		<mapping class="com.yesee.gov.website.model.accounting.VTbReportBalance" />
+		<mapping class="com.yesee.gov.website.model.accounting.VTbReportHedge" />
+		
+    </session-factory>
+</hibernate-configuration>

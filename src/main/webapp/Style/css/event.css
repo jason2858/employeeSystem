@@ -1,0 +1,99 @@
+/* 週末 */
+#calendar .ys-weekend {
+  color: #491c1d;
+  background-color: #fee8e0;
+  border-color: #efdad3;
+}
+/* 放假日 */
+#calendar .ys-holiday {
+  color: #491c1d;
+  background-color: #fdd1c2;
+  border-color: #eec5b7;
+}
+/* 週末補上班 */
+#calendar .ys-makeup {
+  color: #4e4848;
+  background-color: #f5f0ef;
+  border-color: #e7e2e1;
+}
+/* 公司活動 */
+#calendar .ys-event {
+  color: #432e13;
+  background-color: #fad699;
+  border-color: #ebc990;
+}
+/* 其他 */
+#calendar .ys-other {
+  color: #333333;
+  background-color: #e5e5e5;
+  border-color: #d8d8d8;
+}
+/* 請假 */
+#calendar .ys-leave {
+  color: #4e452d;
+  background-color: #fffbc8;
+  border-color: #f0ecbc;
+}
+/* 出差 */
+#calendar .ys-travel {
+  color: #243a59;
+  background-color: #e1edfe;
+  border-color: #d4dfef;
+}
+
+.bg-g {
+	margin-bottom: 4px;
+}
+
+.bg-g div {
+	/*z-index:1;*/
+	position: relative;
+	vertical-align: middle;
+	text-align: center;
+	display: inline-block;
+	width: 55px;
+	height: 55px;
+	/*background:#FFC107;*/
+	border: 1px solid #000;
+}
+
+.bg-g div span {
+	z-index: 0;
+	position: absolute;
+	top: 1px;
+	right: 0;
+	bottom: 0;
+	left: 3px;
+	transform: rotateZ(40deg);
+	color: lightgrey;
+	font-size: 25px;
+	height: 55px;
+	background: #7b7bfffc;
+	pointer-events: none;
+	cursor: default;
+	border-radius: 1em;
+	opacity: 0.3;
+
+}
+
+.bg-g div input {
+	z-index: 1;
+	position: inherit;
+	/*display:flex;
+		    align-items:center;
+		    justify-content:center;*/
+	background-color: transparent;
+	width: 50px;
+	height: 50px;
+	font-size: 30px;
+}
+
+bb {
+	width: 55px;
+	height: 55px;
+}
+
+.no-spinners::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

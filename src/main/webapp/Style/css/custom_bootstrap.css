@@ -1,0 +1,69 @@
+:root {
+  --primary: #bbf;
+  --primaryDark: #99f;
+  --primaryShadow: rgba( 176, 176, 255, .5);
+  --danger: #faa;
+  --dangerDark: #f88;
+  --dangerShadow: rgba( 255, 160, 160, .5);
+  --info: #E7E7E7;
+  --infoDark: #c8c8c8;
+  --infoShadow: rgba( 232, 232, 232, .5);
+}
+
+button img {
+  pointer-events: none;
+}
+
+input::-webkit-calendar-picker-indicator {
+  margin-bottom: 6px;
+}
+
+.btn-transparent {
+  background: transparent;
+}
+
+.btn--primary,
+.btn--danger,
+.btn--info,
+.btn-transparent {
+  cursor: pointer;
+  color: #000;
+}
+
+.btn--primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+.btn--primary:hover {
+  background-color: var(--primaryDark);
+  border-color: var(--primaryDark);
+}
+.btn--primary:focus {
+  box-shadow: 0 0 0 0.2rem var(--primaryShadow);
+}
+.btn--danger {
+  background-color: var(--danger);
+  border-color: var(--danger);
+}
+.btn--danger:hover {
+  background-color: var(--dangerDark);
+  border-color: var(--dangerDark);
+}
+.btn--danger:focus {
+  box-shadow: 0 0 0 0.2rem var(--dengerShadow);
+}
+.btn--info {
+  background-color: var(--info);
+  border-color: var(--info);
+}
+.btn--info:hover {
+  background-color: var(--infoDark);
+  border-color: var(--infoDark);
+}
+.btn--info:focus {
+  box-shadow: 0 0 0 0.2rem var(--infoShadow);
+}
+
+.flex-shrink {
+  flex-shrink: 0;
+}

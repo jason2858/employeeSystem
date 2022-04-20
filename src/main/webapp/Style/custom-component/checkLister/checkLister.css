@@ -1,0 +1,132 @@
+/* checkbox-selector */
+/* reset */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+label {
+  margin: 0;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a:hover {
+  text-decoration: none;
+  color: #000;
+}
+/* form_search dropdown */
+.drop-menu {
+  display: none;
+  position: absolute;
+  left: 5%;
+  margin-top: 8px;
+  padding: 8px;
+  width: max-content;
+  max-width: 90%;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  flex-wrap: wrap;
+  z-index: 2000;
+}
+.drop-menu.show {
+  display: flex;
+}
+.drop-menu h3 {
+  text-align: center;
+}
+.drop-item {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+.drop-item label {
+  padding: 8px 16px 8px 0;
+  margin: 0;
+}
+.drop-item :first-child {
+  font-size: 24px;
+  font-weight: 700;
+}
+/* item_area */
+.clean {
+  font-size: 14px;
+  color: #555;
+}
+.item_area {
+  display: block;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 24px;
+}
+.item_area .header {
+  display: flex;
+  align-items: end;
+  margin-bottom: 8px;
+}
+.item_area .btns {
+  margin-left: 8px;
+}
+.item_area .content {
+  padding: 15px 20px;
+  margin-bottom: 16px;
+  background-color: #eee;
+  min-height: 41px;
+}
+.item_area .list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.item_area .list-item {
+  position: relative;
+  width: 20%;
+  padding: 8px;
+  cursor: default;
+  display: flex;
+  align-items: center;
+}
+
+.item_area .hoverText {
+  font-size: 14px;
+  visibility: hidden;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+  max-width: 200px;
+  padding: 8px;
+  color: #fff;
+  border-radius: 4px;
+  background-color: #bbb;
+}
+.item_area .hoverText p {
+  text-indent: -2rem;
+  padding-left: 2rem;
+}
+.item_area .list-item:hover .hoverText {
+  visibility: visible;
+}
+.del_icon {
+  flex-shrink: 0;
+  width: 26px;
+  margin-right: 4px;
+  display: inline-block;
+}
+.del_icon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.item_area .infos {
+  margin-top: -10px;
+}
