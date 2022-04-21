@@ -2,14 +2,10 @@ package employeeSystem.com.website.accounting.service.impl;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -18,23 +14,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.yesee.gov.website.dao.accounting.AClassItemDao;
-import com.yesee.gov.website.dao.accounting.AccountingBalanceDao;
-import com.yesee.gov.website.dao.accounting.AccountingClosedDao;
-import com.yesee.gov.website.dao.accounting.VReportHedgeDao;
-import com.yesee.gov.website.dao.accounting.VTbVoucherDetailDao;
-import com.yesee.gov.website.dao.accounting.VoucherDetailDao;
-import com.yesee.gov.website.dao.accounting.VoucherHeadDao;
-import com.yesee.gov.website.exception.AccountingException;
-import com.yesee.gov.website.model.accounting.TbAccountingBalance;
-import com.yesee.gov.website.model.accounting.TbAccountingClosed;
-import com.yesee.gov.website.model.accounting.VTbReportHedge;
-import com.yesee.gov.website.service.accounting.BalanceReportService;
-
-import net.sf.json.JSON;
+import employeeSystem.com.website.accounting.dao.AClassItemDao;
+import employeeSystem.com.website.accounting.dao.AccountingBalanceDao;
+import employeeSystem.com.website.accounting.dao.AccountingClosedDao;
+import employeeSystem.com.website.accounting.dao.VReportHedgeDao;
+import employeeSystem.com.website.accounting.dao.VTbVoucherDetailDao;
+import employeeSystem.com.website.accounting.dao.VoucherHeadDao;
+import employeeSystem.com.website.accounting.exception.AccountingException;
+import employeeSystem.com.website.accounting.model.TbAccountingBalance;
+import employeeSystem.com.website.accounting.model.TbAccountingClosed;
+import employeeSystem.com.website.accounting.model.VTbReportHedge;
+import employeeSystem.com.website.accounting.service.BalanceReportService;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 

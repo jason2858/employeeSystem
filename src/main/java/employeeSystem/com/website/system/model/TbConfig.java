@@ -1,4 +1,5 @@
-package com.yesee.gov.website.model;
+package employeeSystem.com.website.system.model;
+
 import static javax.persistence.GenerationType.IDENTITY;
 
 import javax.persistence.Column;
@@ -24,7 +25,6 @@ public class TbConfig implements java.io.Serializable {
 	public TbConfig(String value) {
 		this.value = value;
 	}
-
 
 	@Id
 	@GeneratedValue(strategy = IDENTITY)
@@ -55,5 +55,5 @@ public class TbConfig implements java.io.Serializable {
 	public void setNote(String note) {
 		this.note = note;
 	}
-	
+
 }

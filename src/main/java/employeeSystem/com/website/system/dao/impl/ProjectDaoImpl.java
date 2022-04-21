@@ -1,4 +1,4 @@
-package com.yesee.gov.website.dao.impl;
+package employeeSystem.com.website.system.dao.impl;
 
 import java.util.List;
 
@@ -7,9 +7,9 @@ import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import org.springframework.stereotype.Service;
 
-import com.yesee.gov.website.dao.ProjectDao;
-import com.yesee.gov.website.model.TbProject;
-import com.yesee.gov.website.util.HibernateUtil;
+import employeeSystem.com.website.system.dao.ProjectDao;
+import employeeSystem.com.website.system.model.TbProject;
+import employeeSystem.com.website.system.util.HibernateUtil;
 
 @Service("projectDao")
 public class ProjectDaoImpl implements ProjectDao {
@@ -22,7 +22,7 @@ public class ProjectDaoImpl implements ProjectDao {
 			session.saveOrUpdate(Object);
 			tx.commit();
 		} finally {
-			//session.close();
+			// session.close();
 		}
 
 	}
@@ -35,7 +35,7 @@ public class ProjectDaoImpl implements ProjectDao {
 			session.delete(Object);
 			tx.commit();
 		} finally {
-			//session.close();
+			// session.close();
 		}
 
 	}
@@ -52,7 +52,7 @@ public class ProjectDaoImpl implements ProjectDao {
 			query.setParameter("owner", owner);
 			list = query.list();
 		} finally {
-			//session.close();
+			// session.close();
 		}
 		return list;
 	}
@@ -66,7 +66,7 @@ public class ProjectDaoImpl implements ProjectDao {
 			project = session.get(TbProject.class, id);
 			tx.commit();
 		} finally {
-			//session.close();
+			// session.close();
 		}
 		return project;
 	}
@@ -81,7 +81,7 @@ public class ProjectDaoImpl implements ProjectDao {
 			hql = "FROM TbProject ";
 			list = session.createQuery(hql, TbProject.class).list();
 		} finally {
-			//session.close();
+			// session.close();
 		}
 		return list;
 	}
@@ -97,7 +97,7 @@ public class ProjectDaoImpl implements ProjectDao {
 			query.setParameter("status", "unsign");
 			count = (int) (long) query.uniqueResult();
 		} finally {
-			//session.close();
+			// session.close();
 		}
 		return count;
 	}

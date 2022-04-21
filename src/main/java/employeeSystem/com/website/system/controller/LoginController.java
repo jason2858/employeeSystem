@@ -1,4 +1,4 @@
-package com.yesee.gov.website.controller;
+package employeeSystem.com.website.system.controller;
 
 import java.io.IOException;
 
@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 
 @Controller
 public class LoginController {

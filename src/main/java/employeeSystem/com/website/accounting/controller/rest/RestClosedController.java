@@ -1,13 +1,12 @@
 package employeeSystem.com.website.accounting.controller.rest;
 
-import java.awt.PageAttributes.MediaType;
-import java.util.logging.LogManager;
-import java.util.logging.Logger;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -27,11 +26,19 @@ public class RestClosedController {
 	@Autowired
 	private ClosedService closedService;
 
+	/**
+	 * @Format JSON
+	 * @Description 取得關帳狀態。
+	 */
 	@GetMapping("/closed")
 	public Response getClosed(HttpServletRequest req, HttpServletResponse resp) throws Exception {
 		return Response.ok(closedService.getClosed(req), MediaType.APPLICATION_JSON_TYPE).build();
 	}
 
+	/**
+	 * @Format JSON
+	 * @Description 更新關帳狀態。
+	 */
 	@PutMapping("/closed")
 	public Response updateClosed(HttpServletRequest req, HttpServletResponse resp, @RequestBody JSONObject body)
 			throws Exception {

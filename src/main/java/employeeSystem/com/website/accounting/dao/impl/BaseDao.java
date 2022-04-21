@@ -8,8 +8,8 @@ import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.yesee.gov.website.dao.accounting.IBaseDao;
-import com.yesee.gov.website.util.HibernateUtil;
+import employeeSystem.com.website.accounting.dao.IBaseDao;
+import employeeSystem.com.website.system.util.HibernateUtil;
 
 public class BaseDao<T> implements IBaseDao<T> {
 

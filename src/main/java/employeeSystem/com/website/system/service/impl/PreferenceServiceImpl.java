@@ -1,17 +1,17 @@
-package com.yesee.gov.website.service.impl;
+package employeeSystem.com.website.system.service.impl;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.yesee.gov.website.dao.PreferenceDao;
-import com.yesee.gov.website.model.TbPreference;
-import com.yesee.gov.website.service.PreferenceService;
+import employeeSystem.com.website.system.dao.PreferenceDao;
+import employeeSystem.com.website.system.model.TbPreference;
+import employeeSystem.com.website.system.service.PreferenceService;
 
 @Service("preferenceService")
 public class PreferenceServiceImpl implements PreferenceService {
-	
+
 	@Autowired
 	private PreferenceDao preferenceDao;
 
@@ -24,9 +24,9 @@ public class PreferenceServiceImpl implements PreferenceService {
 	public void del(TbPreference object) throws Exception {
 		preferenceDao.delete(object);
 	}
-	
+
 	@Override
-	public TbPreference getByUserAndKey(String user,String key) throws Exception {
+	public TbPreference getByUserAndKey(String user, String key) throws Exception {
 		return preferenceDao.getByUserAndKey(user, key);
 	}
 

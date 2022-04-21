@@ -1,9 +1,9 @@
-package com.yesee.gov.website.service;
+package employeeSystem.com.website.system.service;
 
 import java.util.List;
 
-import com.yesee.gov.website.model.TbAnnounce;
-import com.yesee.gov.website.model.TbAnnounceDoc;
+import employeeSystem.com.website.system.model.TbAnnounce;
+import employeeSystem.com.website.system.model.TbAnnounceDoc;
 
 public interface AnnounceService {
 

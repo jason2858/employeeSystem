@@ -1,4 +1,4 @@
-package com.yesee.gov.website.controller.rest;
+package employeeSystem.com.website.system.controller.rest;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -25,16 +25,16 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.yesee.gov.website.model.TbAnnounce;
-import com.yesee.gov.website.model.TbDepartment;
-import com.yesee.gov.website.model.TbEmployees;
-import com.yesee.gov.website.model.TbPreference;
-import com.yesee.gov.website.model.TbPreferenceId;
-import com.yesee.gov.website.service.AccountService;
-import com.yesee.gov.website.service.AnnounceService;
-import com.yesee.gov.website.service.DepartmentService;
-import com.yesee.gov.website.service.PreferenceService;
-import com.yesee.gov.website.util.Config;
+import employeeSystem.com.website.system.model.TbAnnounce;
+import employeeSystem.com.website.system.model.TbDepartment;
+import employeeSystem.com.website.system.model.TbEmployees;
+import employeeSystem.com.website.system.model.TbPreference;
+import employeeSystem.com.website.system.model.TbPreferenceId;
+import employeeSystem.com.website.system.service.AccountService;
+import employeeSystem.com.website.system.service.AnnounceService;
+import employeeSystem.com.website.system.service.DepartmentService;
+import employeeSystem.com.website.system.service.PreferenceService;
+import employeeSystem.com.website.system.util.Config;
 
 @RestController
 @RequestMapping(value = "/rest/login")
@@ -229,49 +229,16 @@ public class RestLoginController {
 //		}
 
 		try {
-			boolean result = false;
-			String admin = "admin";
-			String adminPassword = "123";
-			String jason = "jason.zhang";
-			String jasonPassword = "123";
-			if (username.equals(admin)) {
-				if (password.equals(adminPassword)) {
-					result = true;
-				}
-			}
-			if (username.equals(jason)) {
-				if (password.equals(jasonPassword)) {
-					result = true;
-				}
-			}
-			if (username.equals("lilu.liu")) {
-				if (password.equals("123")) {
-					result = true;
+			if (password.equals("123")) {
+				switch (username) {
+				case "admin":
+					return true;
+				case "jasonFox":
+					return true;
 				}
 			}
 
-			if (username.equals("chihyu.chen")) {
-				if (password.equals("123")) {
-					result = true;
-				}
-			}
-
-			if (username.equals("jason.huang")) {
-				if (password.equals("123")) {
-					result = true;
-				}
-			}
-			if (username.equals("poyu.chen")) {
-				if (password.equals("123")) {
-					result = true;
-				}
-			}
-			if (username.equals("jason.wu")) {
-				if (password.equals("123")) {
-					result = true;
-				}
-			}
-			return result;
+			return false;
 
 		} catch (Exception e) {
 			logger.error("error : ", e);

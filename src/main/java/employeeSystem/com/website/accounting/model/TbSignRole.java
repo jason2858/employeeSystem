@@ -23,9 +23,6 @@ public class TbSignRole implements java.io.Serializable {
 	@Column(name = "role_id", unique = true, nullable = false, length = 2)
 	private String roleId;
 
-//	@Column(name = "sign_lv", nullable = false, length = 2)
-//	private Integer signLv;
-
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "role", referencedColumnName = "name", nullable = false, insertable = true, updatable = true)
 	private TbGroup role;
@@ -37,6 +34,7 @@ public class TbSignRole implements java.io.Serializable {
 	private Date createDate;
 
 	public TbSignRole() {
+
 	}
 
 	public TbSignRole(String roleId, TbGroup role, String createUser, Date createDate) {
@@ -47,15 +45,6 @@ public class TbSignRole implements java.io.Serializable {
 		this.createDate = createDate;
 	}
 
-//	public TbSignRole(String roleId, Integer signLv, TbGroup role, String createUser, Date createDate) {
-//		super();
-//		this.roleId = roleId;
-//		this.signLv = signLv;
-//		this.role = role;
-//		this.createUser = createUser;
-//		this.createDate = createDate;
-//	}
-
 	public String getRoleId() {
 		return roleId;
 	}
@@ -63,14 +52,6 @@ public class TbSignRole implements java.io.Serializable {
 	public void setRoleId(String roleId) {
 		this.roleId = roleId;
 	}
-
-//	public Integer getSignLv() {
-//		return signLv;
-//	}
-//
-//	public void setSignLv(Integer signLv) {
-//		this.signLv = signLv;
-//	}
 
 	public TbGroup getRole() {
 		return role;

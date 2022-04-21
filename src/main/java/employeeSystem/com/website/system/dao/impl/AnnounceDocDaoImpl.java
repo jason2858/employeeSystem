@@ -1,4 +1,4 @@
-package com.yesee.gov.website.dao.impl;
+package employeeSystem.com.website.system.dao.impl;
 
 import java.util.List;
 
@@ -10,9 +10,9 @@ import org.hibernate.query.Query;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.yesee.gov.website.dao.AnnounceDocDao;
-import com.yesee.gov.website.model.TbAnnounceDoc;
-import com.yesee.gov.website.util.HibernateUtil;
+import employeeSystem.com.website.system.dao.AnnounceDocDao;
+import employeeSystem.com.website.system.model.TbAnnounceDoc;
+import employeeSystem.com.website.system.util.HibernateUtil;
 
 @Repository("announceDocDao")
 public class AnnounceDocDaoImpl implements AnnounceDocDao {
@@ -30,7 +30,6 @@ public class AnnounceDocDaoImpl implements AnnounceDocDao {
 		} finally {
 			// session.close();
 		}
-
 	}
 
 	@Transactional
@@ -82,7 +81,6 @@ public class AnnounceDocDaoImpl implements AnnounceDocDao {
 		} finally {
 			// session.close();
 		}
-
 	}
 
 	@Override

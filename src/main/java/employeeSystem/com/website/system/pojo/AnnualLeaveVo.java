@@ -1,23 +1,23 @@
-package com.yesee.gov.website.pojo;
+package employeeSystem.com.website.system.pojo;
 
 import org.springframework.stereotype.Component;
 
 //for setting & passing data to fullcalendar
 @Component
 public class AnnualLeaveVo {
-	
+
 	private String empName;
-	
+
 	private String accountName;
-	
+
 	private String entitledHours;
-	
+
 	private String year;
-	
+
 	private String skdHours;
-	
+
 	private String pastLeave;
-	
+
 	private String dep;
 
 	public String getEmpName() {
@@ -75,6 +75,5 @@ public class AnnualLeaveVo {
 	public void setAccountName(String accountName) {
 		this.accountName = accountName;
 	}
-
 
 }

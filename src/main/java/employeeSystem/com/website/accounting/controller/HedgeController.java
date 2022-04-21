@@ -14,6 +14,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/accounting")
 public class HedgeController {
 
+	/**
+	 * @Format Web View
+	 * @Description 取得對沖傳票頁面
+	 */
 	@GetMapping("/hedge.do")
 	public String jumpJSP(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		return "/accounting_hedge";

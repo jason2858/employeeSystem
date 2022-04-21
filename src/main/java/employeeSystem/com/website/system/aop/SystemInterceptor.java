@@ -1,4 +1,5 @@
-package com.yesee.gov.website.aop;
+package employeeSystem.com.website.system.aop;
+
 import java.io.PrintWriter;
 
 import javax.servlet.http.HttpServletRequest;
@@ -11,11 +12,9 @@ import org.aspectj.lang.annotation.Aspect;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.yesee.gov.website.exception.AccountingException;
-import com.yesee.gov.website.exception.SystemOutException;
-import com.yesee.gov.website.util.HibernateUtil;
-
+import employeeSystem.com.website.system.exception.SystemOutException;
 import net.sf.json.JSONObject;
+
 @Aspect
 @Component
 public class SystemInterceptor {

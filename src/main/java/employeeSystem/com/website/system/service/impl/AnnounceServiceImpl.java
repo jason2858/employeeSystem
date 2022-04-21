@@ -1,15 +1,15 @@
-package com.yesee.gov.website.service.impl;
+package employeeSystem.com.website.system.service.impl;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.yesee.gov.website.dao.AnnounceDao;
-import com.yesee.gov.website.dao.AnnounceDocDao;
-import com.yesee.gov.website.model.TbAnnounce;
-import com.yesee.gov.website.model.TbAnnounceDoc;
-import com.yesee.gov.website.service.AnnounceService;
+import employeeSystem.com.website.system.dao.AnnounceDao;
+import employeeSystem.com.website.system.dao.AnnounceDocDao;
+import employeeSystem.com.website.system.model.TbAnnounce;
+import employeeSystem.com.website.system.model.TbAnnounceDoc;
+import employeeSystem.com.website.system.service.AnnounceService;
 
 @Service("announceService")
 public class AnnounceServiceImpl implements AnnounceService {

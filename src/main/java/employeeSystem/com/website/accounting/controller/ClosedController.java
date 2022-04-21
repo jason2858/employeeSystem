@@ -14,6 +14,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/accounting")
 public class ClosedController {
 
+	/**
+	 * @Format Web View
+	 * @Description 取得關帳頁面
+	 */
 	@GetMapping("/closed.do")
 	public String jumpClosedJSP(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		return "/accounting_closed";

@@ -1,4 +1,4 @@
-package com.yesee.gov.website.util;
+package employeeSystem.com.website.system.util;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

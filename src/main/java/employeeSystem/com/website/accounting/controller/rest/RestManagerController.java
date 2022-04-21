@@ -1,13 +1,12 @@
 package employeeSystem.com.website.accounting.controller.rest;
 
-import java.awt.PageAttributes.MediaType;
-import java.util.logging.LogManager;
-import java.util.logging.Logger;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -30,10 +29,8 @@ public class RestManagerController {
 	private AccountingService accountingService;
 
 	/**
-	 * @param c_id, i_id, i_name
-	 * @return classList: {cName, itemList: {iId, iName, directions}}
-	 * @description 取得項目管理清單。
-	 * @description 透過aAccountingService.getManager取得項目管理清單並回傳至前端。
+	 * @Format JSON
+	 * @Description 取得項目清單。
 	 */
 	@GetMapping("/manager")
 	public Response getManager(HttpServletRequest req, HttpServletResponse resp) throws Exception {
@@ -42,9 +39,8 @@ public class RestManagerController {
 	}
 
 	/**
-	 * @param c_id, "c_type"
-	 * @return itemList: {iId, iName}
-	 * @description 取得項目下拉選單。
+	 * @Format JSON
+	 * @Description 取得項目下拉選單。
 	 */
 	@GetMapping("/itemDrop")
 	public Response itemDrop(HttpServletRequest req, HttpServletResponse resp) throws Exception {
@@ -53,9 +49,8 @@ public class RestManagerController {
 	}
 
 	/**
-	 * @param
-	 * @return classList: {cId, cName}
-	 * @description 取得類別下拉選單。
+	 * @Format JSON
+	 * @Description 取得類別下拉選單。
 	 */
 	@GetMapping("/classDrop")
 	public Response classDrop(HttpServletRequest req, HttpServletResponse resp) throws Exception {
@@ -63,6 +58,10 @@ public class RestManagerController {
 		return Response.ok(accountingService.getClassList(), MediaType.APPLICATION_JSON_TYPE).build();
 	}
 
+	/**
+	 * @Format JSON
+	 * @Description 新增項目。
+	 */
 	@PostMapping("/manager")
 	public Response saveManager(HttpServletRequest req, HttpServletResponse resp, @RequestBody JSONObject body)
 			throws Exception {
@@ -70,6 +69,10 @@ public class RestManagerController {
 		return Response.ok().build();
 	}
 
+	/**
+	 * @Format JSON
+	 * @Description 更新項目。
+	 */
 	@PutMapping("/manager")
 	public Response updateManager(HttpServletRequest req, HttpServletResponse resp, @RequestBody JSONObject body)
 			throws Exception {
@@ -77,6 +80,10 @@ public class RestManagerController {
 		return Response.ok().build();
 	}
 
+	/**
+	 * @Format JSON
+	 * @Description 停用項目。
+	 */
 	@DeleteMapping("/manager")
 	public Response deleteManager(HttpServletRequest req, HttpServletResponse resp, @RequestBody JSONObject body)
 			throws Exception {
@@ -84,6 +91,10 @@ public class RestManagerController {
 		return Response.ok().build();
 	}
 
+	/**
+	 * @Format JSON
+	 * @Description 新增主項目類別。
+	 */
 	@PostMapping("/c/manager")
 	public Response saveClass(HttpServletRequest req, HttpServletResponse resp, @RequestBody JSONObject body)
 			throws Exception {
@@ -91,6 +102,10 @@ public class RestManagerController {
 		return Response.ok().build();
 	}
 
+	/**
+	 * @Format JSON
+	 * @Description 更新主項目類別。
+	 */
 	@PutMapping("/c/manager")
 	public Response updateClass(HttpServletRequest req, HttpServletResponse resp, @RequestBody JSONObject body)
 			throws Exception {
@@ -98,6 +113,10 @@ public class RestManagerController {
 		return Response.ok().build();
 	}
 
+	/**
+	 * @Format JSON
+	 * @Description 測試用。
+	 */
 	@GetMapping("/example")
 	public Response example(HttpServletRequest req, HttpServletResponse resp) throws Exception {
 

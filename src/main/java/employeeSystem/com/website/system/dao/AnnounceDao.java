@@ -1,8 +1,8 @@
-package com.yesee.gov.website.dao;
+package employeeSystem.com.website.system.dao;
 
 import java.util.List;
 
-import com.yesee.gov.website.model.TbAnnounce;
+import employeeSystem.com.website.system.model.TbAnnounce;
 
 public interface AnnounceDao {
 

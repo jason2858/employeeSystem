@@ -1,4 +1,4 @@
-package com.yesee.gov.website.service.impl;
+package employeeSystem.com.website.system.service.impl;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -12,16 +12,16 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.yesee.gov.website.dao.DepartmentDao;
-import com.yesee.gov.website.dao.EmployeesDao;
-import com.yesee.gov.website.model.TbDepartment;
-import com.yesee.gov.website.model.TbEmployees;
-import com.yesee.gov.website.service.DepartmentService;
+import employeeSystem.com.website.system.dao.DepartmentDao;
+import employeeSystem.com.website.system.dao.EmployeesDao;
+import employeeSystem.com.website.system.model.TbDepartment;
+import employeeSystem.com.website.system.model.TbEmployees;
+import employeeSystem.com.website.system.service.DepartmentService;
 
 @Service("departmentService")
 public class DepartmentServiceImpl implements DepartmentService {
 	private static final Logger logger = LogManager.getLogger(DepartmentServiceImpl.class);
-	
+
 	@Autowired
 	private DepartmentDao departmentDao;
 
@@ -43,7 +43,7 @@ public class DepartmentServiceImpl implements DepartmentService {
 			TbEmployees emp = it.next();
 			if (emp.getDepartmentId() != null) {
 				id = emp.getDepartmentId();
-				if(map.get(id)== null) {
+				if (map.get(id) == null) {
 					map.put(id, 0);
 				}
 				map.put(id, map.get(id) + 1);
@@ -63,7 +63,7 @@ public class DepartmentServiceImpl implements DepartmentService {
 				departmentDao.updateAuthorise("4", manager);
 			}
 		}
-		//不同公司更新部門時，子部門的companyId轉換
+		// 不同公司更新部門時，子部門的companyId轉換
 		if (record.getParentId() != null) {
 			if (!"add".equals(manager)) {
 				String rootDepId = record.getId() + "";

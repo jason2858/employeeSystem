@@ -7,9 +7,9 @@ import org.hibernate.Session;
 import org.hibernate.query.Query;
 import org.springframework.stereotype.Repository;
 
-import com.yesee.gov.website.dao.accounting.VoucherHedgeDao;
-import com.yesee.gov.website.model.accounting.TbVoucherHedge;
-import com.yesee.gov.website.util.HibernateUtil;
+import employeeSystem.com.website.accounting.dao.VoucherHedgeDao;
+import employeeSystem.com.website.accounting.model.TbVoucherHedge;
+import employeeSystem.com.website.system.util.HibernateUtil;
 
 @Repository("VoucherHedgeDao")
 public class VoucherHedgeDaoImpl extends BaseDao<TbVoucherHedge> implements VoucherHedgeDao {

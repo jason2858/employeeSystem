@@ -1,4 +1,4 @@
-package com.yesee.gov.website.dao.impl;
+package employeeSystem.com.website.system.dao.impl;
 
 import java.util.List;
 
@@ -7,9 +7,9 @@ import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import org.springframework.stereotype.Repository;
 
-import com.yesee.gov.website.dao.CustomerDao;
-import com.yesee.gov.website.model.TbCustomer;
-import com.yesee.gov.website.util.HibernateUtil;
+import employeeSystem.com.website.system.dao.CustomerDao;
+import employeeSystem.com.website.system.model.TbCustomer;
+import employeeSystem.com.website.system.util.HibernateUtil;
 
 @Repository("customerDao")
 public class CustomerDaoImpl implements CustomerDao {
@@ -22,7 +22,7 @@ public class CustomerDaoImpl implements CustomerDao {
 			session.saveOrUpdate(Object);
 			tx.commit();
 		} finally {
-			//session.close();
+			// session.close();
 		}
 
 	}
@@ -35,7 +35,7 @@ public class CustomerDaoImpl implements CustomerDao {
 			session.delete(Object);
 			tx.commit();
 		} finally {
-			//session.close();
+			// session.close();
 		}
 
 	}
@@ -51,7 +51,7 @@ public class CustomerDaoImpl implements CustomerDao {
 			query.executeUpdate();
 			tx.commit();
 		} finally {
-			//session.close();
+			// session.close();
 		}
 	}
 
@@ -66,7 +66,7 @@ public class CustomerDaoImpl implements CustomerDao {
 			query.setParameter("id", id);
 			list = query.list();
 		} finally {
-			//session.close();
+			// session.close();
 		}
 		return list.size() > 0 ? list.get(0) : null;
 	}
@@ -85,7 +85,7 @@ public class CustomerDaoImpl implements CustomerDao {
 			query.setParameter("delete", "delete");
 			list = query.list();
 		} finally {
-			//session.close();
+			// session.close();
 		}
 		return list;
 	}
@@ -101,7 +101,7 @@ public class CustomerDaoImpl implements CustomerDao {
 			query.setParameter("status", "unsign");
 			count = (int) (long) query.uniqueResult();
 		} finally {
-			//session.close();
+			// session.close();
 		}
 		return count;
 	}
@@ -117,7 +117,7 @@ public class CustomerDaoImpl implements CustomerDao {
 			query.setParameter("status", status);
 			list = query.list();
 		} finally {
-			//session.close();
+			// session.close();
 		}
 		return list;
 	}
@@ -133,7 +133,7 @@ public class CustomerDaoImpl implements CustomerDao {
 			query.setParameter("status", status);
 			list = query.list();
 		} finally {
-			//session.close();
+			// session.close();
 		}
 		return list;
 	}
@@ -149,7 +149,7 @@ public class CustomerDaoImpl implements CustomerDao {
 			query.setParameter("name", name);
 			list = query.list();
 		} finally {
-			//session.close();
+			// session.close();
 		}
 		return list.size() > 0 ? list.get(0) : null;
 	}
@@ -165,7 +165,7 @@ public class CustomerDaoImpl implements CustomerDao {
 			query.setParameter("cusTaxId", cusTaxId);
 			list = query.list();
 		} finally {
-			//session.close();
+			// session.close();
 		}
 		return list.size() > 0 ? list.get(0) : null;
 	}

@@ -1,5 +1,6 @@
-package com.yesee.gov.website.model;
+package employeeSystem.com.website.system.model;
 // default package
+
 // Generated 2019/1/23 �U�� 02:23:28 by Hibernate Tools 4.3.5.Final
 
 import static javax.persistence.GenerationType.IDENTITY;

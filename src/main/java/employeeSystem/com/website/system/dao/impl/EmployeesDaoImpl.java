@@ -1,4 +1,4 @@
-package com.yesee.gov.website.dao.impl;
+package employeeSystem.com.website.system.dao.impl;
 
 import java.util.HashMap;
 import java.util.List;
@@ -9,9 +9,9 @@ import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import org.springframework.stereotype.Repository;
 
-import com.yesee.gov.website.dao.EmployeesDao;
-import com.yesee.gov.website.model.TbEmployees;
-import com.yesee.gov.website.util.HibernateUtil;
+import employeeSystem.com.website.system.dao.EmployeesDao;
+import employeeSystem.com.website.system.model.TbEmployees;
+import employeeSystem.com.website.system.util.HibernateUtil;
 
 @Repository("employeesDao")
 public class EmployeesDaoImpl implements EmployeesDao {
@@ -47,7 +47,7 @@ public class EmployeesDaoImpl implements EmployeesDao {
 			query.setProperties(params);
 			list = query.list();
 		} finally {
-			//session.close();
+			// session.close();
 		}
 		return list;
 	}
@@ -64,7 +64,7 @@ public class EmployeesDaoImpl implements EmployeesDao {
 			query.setParameter("username", name);
 			list = query.list();
 		} finally {
-			//session.close();
+			// session.close();
 		}
 		return list;
 	}
@@ -97,7 +97,7 @@ public class EmployeesDaoImpl implements EmployeesDao {
 			query.setProperties(params);
 			list = query.list();
 		} finally {
-			//session.close();
+			// session.close();
 		}
 		return list;
 	}
@@ -110,7 +110,7 @@ public class EmployeesDaoImpl implements EmployeesDao {
 			session.delete(Object);
 			tx.commit();
 		} finally {
-			//session.close();
+			// session.close();
 		}
 	}
 
@@ -122,7 +122,7 @@ public class EmployeesDaoImpl implements EmployeesDao {
 			session.saveOrUpdate(object);
 			tx.commit();
 		} finally {
-			//session.close();
+			// session.close();
 		}
 	}
 
@@ -137,7 +137,7 @@ public class EmployeesDaoImpl implements EmployeesDao {
 			query.setParameter("departmentId", "15");
 			list = query.list();
 		} finally {
-			//session.close();
+			// session.close();
 		}
 		return list;
 	}

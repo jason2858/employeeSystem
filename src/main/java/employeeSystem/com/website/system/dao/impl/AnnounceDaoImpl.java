@@ -1,4 +1,4 @@
-package com.yesee.gov.website.dao.impl;
+package employeeSystem.com.website.system.dao.impl;
 
 import java.util.List;
 
@@ -9,9 +9,9 @@ import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import org.springframework.stereotype.Repository;
 
-import com.yesee.gov.website.dao.AnnounceDao;
-import com.yesee.gov.website.model.TbAnnounce;
-import com.yesee.gov.website.util.HibernateUtil;
+import employeeSystem.com.website.system.dao.AnnounceDao;
+import employeeSystem.com.website.system.model.TbAnnounce;
+import employeeSystem.com.website.system.util.HibernateUtil;
 
 @Repository("announceDao")
 public class AnnounceDaoImpl implements AnnounceDao {

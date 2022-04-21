@@ -22,6 +22,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/accounting")
 public class ManagerController {
 
+	/**
+	 * @Format Web View
+	 * @Description 取得項目管理頁面
+	 */
 	@GetMapping("/manager.do")
 	public String jumpManagerJSP(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {

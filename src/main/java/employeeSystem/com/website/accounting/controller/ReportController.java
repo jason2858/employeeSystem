@@ -14,12 +14,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/accounting/report")
 public class ReportController {
 
+	/**
+	 * @Format Web View
+	 * @Description 取得應付帳款頁面
+	 */
 	@GetMapping("/receivable.do")
 	public String jumpReceivableJSP(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 		return "/accounting_receivable";
 	}
 
+	/**
+	 * @Format Web View
+	 * @Description 取得應收帳款頁面
+	 */
 	@GetMapping("/balance.do")
 	public String jumpBalanceJSP(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {

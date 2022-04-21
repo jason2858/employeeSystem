@@ -1,4 +1,4 @@
-package com.yesee.gov.website.dao.impl;
+package employeeSystem.com.website.system.dao.impl;
 
 import java.util.List;
 
@@ -9,9 +9,9 @@ import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import org.springframework.stereotype.Service;
 
-import com.yesee.gov.website.dao.PreferenceDao;
-import com.yesee.gov.website.model.TbPreference;
-import com.yesee.gov.website.util.HibernateUtil;
+import employeeSystem.com.website.system.dao.PreferenceDao;
+import employeeSystem.com.website.system.model.TbPreference;
+import employeeSystem.com.website.system.util.HibernateUtil;
 
 @Service("PreferenceDao")
 public class PreferenceDaoImpl implements PreferenceDao {
@@ -27,7 +27,7 @@ public class PreferenceDaoImpl implements PreferenceDao {
 			tx.commit();
 			logger.info("save TbPreference success");
 		} finally {
-			//session.close();
+			// session.close();
 		}
 
 	}
@@ -41,7 +41,7 @@ public class PreferenceDaoImpl implements PreferenceDao {
 			tx.commit();
 			logger.info("del TbPreference success");
 		} finally {
-			//session.close();
+			// session.close();
 		}
 
 	}
@@ -57,7 +57,7 @@ public class PreferenceDaoImpl implements PreferenceDao {
 			query.setParameter("KEY", key);
 			list = query.list();
 		} finally {
-			//session.close();
+			// session.close();
 		}
 		if (list.size() != 0) {
 			logger.info("find TbPreference by user and key success");
@@ -80,7 +80,7 @@ public class PreferenceDaoImpl implements PreferenceDao {
 			query.setParameter("USER", user);
 			list = query.list();
 		} finally {
-			//session.close();
+			// session.close();
 		}
 		if (list.size() != 0) {
 			return list;

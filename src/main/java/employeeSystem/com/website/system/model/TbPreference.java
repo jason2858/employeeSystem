@@ -1,5 +1,6 @@
-package com.yesee.gov.website.model;
+package employeeSystem.com.website.system.model;
 // default package
+
 // Generated 2019/1/8 �U�� 03:10:49 by Hibernate Tools 4.3.5.Final
 
 import javax.persistence.AttributeOverride;

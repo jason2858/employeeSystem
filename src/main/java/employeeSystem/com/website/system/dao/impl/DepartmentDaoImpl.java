@@ -1,4 +1,4 @@
-package com.yesee.gov.website.dao.impl;
+package employeeSystem.com.website.system.dao.impl;
 
 import java.util.List;
 
@@ -7,9 +7,9 @@ import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import org.springframework.stereotype.Repository;
 
-import com.yesee.gov.website.dao.DepartmentDao;
-import com.yesee.gov.website.model.TbDepartment;
-import com.yesee.gov.website.util.HibernateUtil;
+import employeeSystem.com.website.system.dao.DepartmentDao;
+import employeeSystem.com.website.system.model.TbDepartment;
+import employeeSystem.com.website.system.util.HibernateUtil;
 
 @Repository("departmentDao")
 public class DepartmentDaoImpl implements DepartmentDao {
@@ -22,7 +22,7 @@ public class DepartmentDaoImpl implements DepartmentDao {
 			session.saveOrUpdate(Object);
 			tx.commit();
 		} finally {
-			//session.close();
+			// session.close();
 		}
 
 	}
@@ -39,7 +39,7 @@ public class DepartmentDaoImpl implements DepartmentDao {
 			query.executeUpdate();
 			tx.commit();
 		} finally {
-			//session.close();
+			// session.close();
 		}
 	}
 
@@ -53,7 +53,7 @@ public class DepartmentDaoImpl implements DepartmentDao {
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-			//session.close();
+			// session.close();
 		}
 
 	}
@@ -67,7 +67,7 @@ public class DepartmentDaoImpl implements DepartmentDao {
 			sql = "FROM TbDepartment ";
 			list = session.createQuery(sql, TbDepartment.class).list();
 		} finally {
-			//session.close();
+			// session.close();
 		}
 		return list;
 	}
@@ -81,7 +81,7 @@ public class DepartmentDaoImpl implements DepartmentDao {
 			dep = (TbDepartment) session.get(TbDepartment.class, id);
 			tx.commit();
 		} finally {
-			//session.close();
+			// session.close();
 		}
 		return dep;
 	}
@@ -96,7 +96,7 @@ public class DepartmentDaoImpl implements DepartmentDao {
 			query.setParameter("ids", ids);
 			list = query.list();
 		} finally {
-			//session.close();
+			// session.close();
 		}
 		return list;
 	}
@@ -111,7 +111,7 @@ public class DepartmentDaoImpl implements DepartmentDao {
 			query.setParameter("id", id);
 			list = query.list();
 		} finally {
-			//session.close();
+			// session.close();
 		}
 		return list;
 	}
@@ -126,7 +126,7 @@ public class DepartmentDaoImpl implements DepartmentDao {
 			query.setParameter("account", account);
 			list = query.list();
 		} finally {
-			//session.close();
+			// session.close();
 		}
 		return list;
 	}

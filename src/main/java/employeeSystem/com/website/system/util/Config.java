@@ -1,4 +1,4 @@
-package com.yesee.gov.website.util;
+package employeeSystem.com.website.system.util;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -9,7 +9,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.hibernate.Session;
 
-import com.yesee.gov.website.model.TbConfig;
+import employeeSystem.com.website.system.model.TbConfig;
 
 public class Config {
 

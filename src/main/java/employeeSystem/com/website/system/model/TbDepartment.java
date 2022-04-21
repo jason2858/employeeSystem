@@ -1,7 +1,8 @@
-package com.yesee.gov.website.model;
+package employeeSystem.com.website.system.model;
 //default package
 
 import static javax.persistence.GenerationType.IDENTITY;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;

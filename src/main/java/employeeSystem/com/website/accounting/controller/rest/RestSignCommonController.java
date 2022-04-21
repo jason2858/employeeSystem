@@ -1,13 +1,12 @@
 package employeeSystem.com.website.accounting.controller.rest;
 
-import java.awt.PageAttributes.MediaType;
-import java.util.logging.LogManager;
-import java.util.logging.Logger;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -28,11 +27,8 @@ public class RestSignCommonController {
 	public SignCommonService signCommonService;
 
 	/**
-	 * @param req
-	 * @param resp
-	 * @return
-	 * @throws Exception 取得常用簽程下拉選單。
-	 *                   透過signCommonDao.getSignCommonList取得常用簽程下拉選單資料並回傳至前端。
+	 * @Format JSON
+	 * @Description 取得常用簽程下拉選單。
 	 */
 	@GetMapping(value = "/signCommon")
 	public Response getSignCommom(HttpServletRequest req, HttpServletResponse resp) throws Exception {
@@ -42,11 +38,8 @@ public class RestSignCommonController {
 	}
 
 	/**
-	 * @RequestBody signCommonInfo
-	 * @param req
-	 * @param resp
-	 * @return
-	 * @throws Exception 新增常用簽程。接收前端傳回的signCommonInfo 透過signCommonService.save儲存資料
+	 * @Format JSON
+	 * @Description 新增常用簽程。
 	 */
 	@PostMapping(value = "/signCommon")
 	public Response save(HttpServletRequest req, HttpServletResponse resp, @RequestBody JSONObject signCommonInfo)
@@ -57,10 +50,8 @@ public class RestSignCommonController {
 	}
 
 	/**
-	 * @param req
-	 * @param resp
-	 * @return
-	 * @throws Exception 取得常用簽程內容。 透過signCommonService取得資料並回傳至前端。
+	 * @Format JSON
+	 * @Description 取得常用簽程內容。
 	 */
 	@GetMapping(value = "/signCommon/set")
 	public Response getSignCommonSet(HttpServletRequest req, HttpServletResponse resp) throws Exception {

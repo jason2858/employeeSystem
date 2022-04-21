@@ -1,4 +1,4 @@
-package com.yesee.gov.website.model;
+package employeeSystem.com.website.system.model;
 // default package
 
 // Generated 2019/1/18 �W�� 10:49:25 by Hibernate Tools 4.3.5.Final
