@@ -1,4 +1,4 @@
-package com.yesee.gov.website.dao.accounting.impl;
+package employeeSystem.com.website.accounting.dao.impl;
 
 import java.util.List;
 import java.util.Map;
@@ -96,14 +96,12 @@ public class BaseDao<T> implements IBaseDao<T> {
 //				.append((v instanceof String) ? v.toString().indexOf("%") < 0 ? " = :" : " like :"
 //						: (v instanceof List) ? " in (:" : "")
 //				.append(k.substring(k.lastIndexOf(".") + 1)).append((v instanceof List) ? ")" : ""));
-		param.forEach((k, v) ->hql.append(" and ").append(k)
-		.append((v instanceof String) ? v.toString().indexOf("%") < 0
-				? (v.toString().indexOf("&&&") < 0 ? " = :" : " between :")
-				: " like :" : (v instanceof List) ? " in (:" : "")
-		.append(k.substring(k.lastIndexOf(".") + 1))
-		.append((v instanceof List) ? ")"
-				: (v.toString().indexOf("&&&") < 0 ? ""
-						: ("1 and :" + k.substring(k.lastIndexOf(".") + 1) + 2))));
+		param.forEach((k, v) -> hql.append(" and ").append(k).append((v instanceof String)
+				? v.toString().indexOf("%") < 0 ? (v.toString().indexOf("&&&") < 0 ? " = :" : " between :") : " like :"
+				: (v instanceof List) ? " in (:" : "").append(k.substring(k.lastIndexOf(".") + 1))
+				.append((v instanceof List) ? ")"
+						: (v.toString().indexOf("&&&") < 0 ? ""
+								: ("1 and :" + k.substring(k.lastIndexOf(".") + 1) + 2))));
 		if (groupBy != null) {
 			hql.append(" group by ");
 			groupBy.forEach((v) -> hql.append(v).append(","));
@@ -123,11 +121,13 @@ public class BaseDao<T> implements IBaseDao<T> {
 		try {
 			Query<T> query = (Query<T>) session.createQuery(hql.toString(), t);
 //			param.forEach((k, v) -> query.setParameter(k.substring(k.lastIndexOf(".") + 1), v));
-			param.forEach((k, v)->{
-				if(v.toString().indexOf("&&&") >0) {
-					query.setParameter(k.substring(k.lastIndexOf(".") + 1)+1, v.toString().substring(0, v.toString().indexOf("&&&")));
-					query.setParameter(k.substring(k.lastIndexOf(".") + 1)+2, v.toString().substring(v.toString().indexOf("&&&")+3));
-				}else {
+			param.forEach((k, v) -> {
+				if (v.toString().indexOf("&&&") > 0) {
+					query.setParameter(k.substring(k.lastIndexOf(".") + 1) + 1,
+							v.toString().substring(0, v.toString().indexOf("&&&")));
+					query.setParameter(k.substring(k.lastIndexOf(".") + 1) + 2,
+							v.toString().substring(v.toString().indexOf("&&&") + 3));
+				} else {
 					query.setParameter(k.substring(k.lastIndexOf(".") + 1), v);
 				}
 			});

@@ -1,4 +1,4 @@
-package com.yesee.gov.website.service.accounting.impl;
+package employeeSystem.com.website.accounting.service.impl;
 
 import java.net.InetAddress;
 import java.sql.Timestamp;
@@ -20,22 +20,21 @@ import org.hibernate.cfg.Configuration;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.yesee.gov.website.dao.accounting.AccountingClosedDao;
-import com.yesee.gov.website.dao.accounting.SignRoleDao;
-import com.yesee.gov.website.dao.accounting.VoucherHeadDao;
-import com.yesee.gov.website.dao.accounting.VoucherSignDao;
-import com.yesee.gov.website.exception.AccountingException;
-import com.yesee.gov.website.model.TbEmployees;
-import com.yesee.gov.website.model.accounting.TbAccountingClosedPK;
-import com.yesee.gov.website.model.accounting.TbSignRole;
-import com.yesee.gov.website.model.accounting.TbVoucherHead;
-import com.yesee.gov.website.model.accounting.TbVoucherSign;
-import com.yesee.gov.website.service.SendMailService;
-import com.yesee.gov.website.service.accounting.ASignService;
-import com.yesee.gov.website.service.accounting.ClosedService;
-import com.yesee.gov.website.service.accounting.VoucherService;
-import com.yesee.gov.website.util.Config;
-
+import employeeSystem.com.website.accounting.dao.AccountingClosedDao;
+import employeeSystem.com.website.accounting.dao.SignRoleDao;
+import employeeSystem.com.website.accounting.dao.VoucherHeadDao;
+import employeeSystem.com.website.accounting.dao.VoucherSignDao;
+import employeeSystem.com.website.accounting.exception.AccountingException;
+import employeeSystem.com.website.accounting.model.TbAccountingClosedPK;
+import employeeSystem.com.website.accounting.model.TbSignRole;
+import employeeSystem.com.website.accounting.model.TbVoucherHead;
+import employeeSystem.com.website.accounting.model.TbVoucherSign;
+import employeeSystem.com.website.accounting.service.ASignService;
+import employeeSystem.com.website.accounting.service.ClosedService;
+import employeeSystem.com.website.accounting.service.VoucherService;
+import employeeSystem.com.website.system.model.TbEmployees;
+import employeeSystem.com.website.system.service.SendMailService;
+import employeeSystem.com.website.system.util.Config;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 

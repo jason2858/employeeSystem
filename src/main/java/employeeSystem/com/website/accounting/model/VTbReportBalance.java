@@ -1,4 +1,4 @@
-package com.yesee.gov.website.model.accounting;
+package employeeSystem.com.website.accounting.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -15,16 +15,16 @@ public class VTbReportBalance implements java.io.Serializable {
 
 	@Column(name = "balance")
 	private Integer balance;
-	
+
 	@Column(name = "voucher_no", length = 11)
 	private String voucherNo;
-	
+
 	@Column(name = "company", length = 20)
 	private String company;
 
 	@Column(name = "item", length = 4)
 	private String item;
-	
+
 	@Column(name = "item_name", length = 20)
 	private String itemName;
 

@@ -1,4 +1,4 @@
-package com.yesee.gov.website.model.accounting;
+package employeeSystem.com.website.accounting.model;
 
 import static javax.persistence.GenerationType.IDENTITY;
 

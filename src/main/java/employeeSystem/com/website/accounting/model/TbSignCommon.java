@@ -1,4 +1,4 @@
-package com.yesee.gov.website.model.accounting;
+package employeeSystem.com.website.accounting.model;
 
 import java.util.Date;
 
@@ -26,10 +26,10 @@ public class TbSignCommon implements java.io.Serializable {
 	@Column(name = "sign_name", unique = true, nullable = false, length = 15)
 	private String signName;
 
-	@Column(name = "create_user",length = 25)
+	@Column(name = "create_user", length = 25)
 	private String createUser;
 
-	@Column(name = "create_date",length = 10)
+	@Column(name = "create_date", length = 10)
 	private Date createDate;
 
 	public TbSignCommon() {
@@ -42,8 +42,6 @@ public class TbSignCommon implements java.io.Serializable {
 		this.createUser = createUser;
 		this.createDate = createDate;
 	}
-	
-	
 
 	public TbSignCommon(String signName, String createUser, Date createDate) {
 		super();

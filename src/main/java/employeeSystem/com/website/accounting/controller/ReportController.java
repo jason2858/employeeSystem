@@ -1,4 +1,4 @@
-package com.yesee.gov.website.controller.accounting;
+package employeeSystem.com.website.accounting.controller;
 
 import java.io.IOException;
 
@@ -25,5 +25,5 @@ public class ReportController {
 			throws ServletException, IOException {
 		return "/accounting_balance";
 	}
-	
+
 }

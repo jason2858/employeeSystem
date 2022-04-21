@@ -1,4 +1,4 @@
-package com.yesee.gov.website.dao.accounting.impl;
+package employeeSystem.com.website.accounting.dao.impl;
 
 import java.util.HashMap;
 import java.util.List;
@@ -8,13 +8,10 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import org.springframework.stereotype.Repository;
-import org.springframework.util.CollectionUtils;
-import org.springframework.util.StringUtils;
 
-import com.yesee.gov.website.dao.accounting.VoucherDetailDao;
-import com.yesee.gov.website.model.accounting.TbVoucherDetail;
-import com.yesee.gov.website.model.accounting.TbVoucherHead;
-import com.yesee.gov.website.util.HibernateUtil;
+import employeeSystem.com.website.accounting.dao.VoucherDetailDao;
+import employeeSystem.com.website.accounting.model.TbVoucherDetail;
+import employeeSystem.com.website.system.util.HibernateUtil;
 
 @Repository("VoucherDetailDao")
 public class VoucherDetailDaoImpl extends BaseDao<TbVoucherDetail> implements VoucherDetailDao {
@@ -96,6 +93,5 @@ public class VoucherDetailDaoImpl extends BaseDao<TbVoucherDetail> implements Vo
 		}
 		return list;
 	}
-
 
 }

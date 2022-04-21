@@ -1,10 +1,10 @@
-package com.yesee.gov.website.dao.accounting;
+package employeeSystem.com.website.accounting.dao;
 
 import java.util.List;
 import java.util.Map;
 
-import com.yesee.gov.website.model.accounting.TbAccountingClosed;
-import com.yesee.gov.website.model.accounting.TbAccountingClosedPK;
+import employeeSystem.com.website.accounting.model.TbAccountingClosed;
+import employeeSystem.com.website.accounting.model.TbAccountingClosedPK;
 
 public interface AccountingClosedDao {
 

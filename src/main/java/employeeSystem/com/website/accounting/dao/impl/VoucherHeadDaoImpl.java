@@ -1,4 +1,4 @@
-package com.yesee.gov.website.dao.accounting.impl;
+package employeeSystem.com.website.accounting.dao.impl;
 
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
@@ -11,12 +11,11 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import org.springframework.stereotype.Repository;
-import org.springframework.util.CollectionUtils;
 import org.springframework.util.StringUtils;
 
-import com.yesee.gov.website.dao.accounting.VoucherHeadDao;
-import com.yesee.gov.website.model.accounting.TbVoucherHead;
-import com.yesee.gov.website.util.HibernateUtil;
+import employeeSystem.com.website.accounting.dao.VoucherHeadDao;
+import employeeSystem.com.website.accounting.model.TbVoucherHead;
+import employeeSystem.com.website.system.util.HibernateUtil;
 
 @Repository("VoucherHeadDao")
 public class VoucherHeadDaoImpl extends BaseDao<TbVoucherHead> implements VoucherHeadDao {
@@ -124,26 +123,26 @@ public class VoucherHeadDaoImpl extends BaseDao<TbVoucherHead> implements Vouche
 
 		return list;
 	}
-	
+
 	@Override
-	public Map<String, Integer> getHeadTotal(String start, String end,String iId) {
+	public Map<String, Integer> getHeadTotal(String start, String end, String iId) {
 		Session session = HibernateUtil.getSessionFactory().openSession();
 
 		int total = 0;
-		
+
 		Map<String, Integer> result = new HashMap<String, Integer>();
 		try {
-	
+
 			String hql = "SELECT SUM(amount_total) AS total FROM tb_voucher_head WHERE head_item ='" + iId
-					+ "' AND status IN('0','1','2') AND credit_date BETWEEN '"+start+"' AND '"+end+"'";
+					+ "' AND status IN('0','1','2') AND credit_date BETWEEN '" + start + "' AND '" + end + "'";
 
 			Query query = session.createSQLQuery(hql);
 
-			Object sum =   query.uniqueResult();
-			if(StringUtils.isEmpty(sum)) {
+			Object sum = query.uniqueResult();
+			if (StringUtils.isEmpty(sum)) {
 				result.put("headSum", total);
-			}else {
-				result.put("headSum",Integer.parseInt(sum.toString()) );
+			} else {
+				result.put("headSum", Integer.parseInt(sum.toString()));
 			}
 		} finally {
 //			session.close();

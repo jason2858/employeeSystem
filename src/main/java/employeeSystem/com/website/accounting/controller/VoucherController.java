@@ -1,4 +1,4 @@
-package com.yesee.gov.website.controller.accounting;
+package employeeSystem.com.website.accounting.controller;
 
 import java.io.IOException;
 
@@ -17,7 +17,7 @@ public class VoucherController {
 			throws ServletException, IOException {
 		return "/accounting_addVoucher_m";
 	}
-	
+
 	@RequestMapping("/voucher/addVoucher.do")
 	public String jumpAddVoucherJSP(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {

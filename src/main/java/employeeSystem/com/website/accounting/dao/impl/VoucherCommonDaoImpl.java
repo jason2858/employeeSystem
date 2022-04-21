@@ -1,4 +1,4 @@
-package com.yesee.gov.website.dao.accounting.impl;
+package employeeSystem.com.website.accounting.dao.impl;
 
 import java.util.HashMap;
 import java.util.List;
@@ -6,8 +6,8 @@ import java.util.Map;
 
 import org.springframework.stereotype.Repository;
 
-import com.yesee.gov.website.dao.accounting.VoucherCommonDao;
-import com.yesee.gov.website.model.accounting.TbVoucherCommon;
+import employeeSystem.com.website.accounting.dao.VoucherCommonDao;
+import employeeSystem.com.website.accounting.model.TbVoucherCommon;
 
 @Repository("voucherCommonDao")
 public class VoucherCommonDaoImpl extends BaseDao<TbVoucherCommon> implements VoucherCommonDao {

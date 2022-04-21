@@ -1,4 +1,4 @@
-package com.yesee.gov.website.model.accounting;
+package employeeSystem.com.website.accounting.model;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
@@ -35,9 +35,9 @@ public class TbAccountingClosedPK implements java.io.Serializable {
 	public void setMonth(String month) {
 		this.month = month;
 	}
-	
+
 	public String getYearAndMonth() {
-		return year+String.format("%02d", Integer.parseInt(month));
+		return year + String.format("%02d", Integer.parseInt(month));
 	}
 
 }

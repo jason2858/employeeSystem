@@ -1,13 +1,13 @@
-package com.yesee.gov.website.service.accounting;
+package employeeSystem.com.website.accounting.service;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.yesee.gov.website.exception.AccountingException;
-import com.yesee.gov.website.model.accounting.TbVoucherSign;
 import com.yesee.gov.website.pojo.accounting.InsertVoucherInfo;
 import com.yesee.gov.website.pojo.accounting.UpdateVoucherInfo;
 
+import employeeSystem.com.website.accounting.exception.AccountingException;
+import employeeSystem.com.website.accounting.model.TbVoucherSign;
 import net.sf.json.JSONObject;
 
 public interface VoucherService {

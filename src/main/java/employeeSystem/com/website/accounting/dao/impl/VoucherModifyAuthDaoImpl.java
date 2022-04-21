@@ -1,4 +1,4 @@
-package com.yesee.gov.website.dao.accounting.impl;
+package employeeSystem.com.website.accounting.dao.impl;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -7,8 +7,8 @@ import java.util.Map;
 
 import org.springframework.stereotype.Repository;
 
-import com.yesee.gov.website.dao.accounting.VoucherModifyAuthDao;
-import com.yesee.gov.website.model.accounting.TbVoucherModifyAuth;
+import employeeSystem.com.website.accounting.dao.VoucherModifyAuthDao;
+import employeeSystem.com.website.accounting.model.TbVoucherModifyAuth;
 
 @Repository("VoucherModifyAuthDao")
 public class VoucherModifyAuthDaoImpl extends BaseDao<TbVoucherModifyAuth> implements VoucherModifyAuthDao {

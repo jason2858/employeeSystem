@@ -1,4 +1,4 @@
-package com.yesee.gov.website.aop;
+package employeeSystem.com.website.accounting.aop;
 
 import java.io.PrintWriter;
 
@@ -12,9 +12,7 @@ import org.aspectj.lang.annotation.Aspect;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.yesee.gov.website.exception.AccountingException;
-import com.yesee.gov.website.util.HibernateUtil;
-
+import employeeSystem.com.website.accounting.exception.AccountingException;
 import net.sf.json.JSONObject;
 
 @Aspect

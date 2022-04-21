@@ -1,4 +1,4 @@
-package com.yesee.gov.website.dao.accounting.impl;
+package employeeSystem.com.website.accounting.dao.impl;
 
 import java.util.List;
 import java.util.Map;
@@ -8,9 +8,9 @@ import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import org.springframework.stereotype.Repository;
 
-import com.yesee.gov.website.dao.accounting.HedgeDao;
-import com.yesee.gov.website.model.accounting.TbHedge;
-import com.yesee.gov.website.util.HibernateUtil;
+import employeeSystem.com.website.accounting.dao.HedgeDao;
+import employeeSystem.com.website.accounting.model.TbHedge;
+import employeeSystem.com.website.system.util.HibernateUtil;
 
 @Repository("HedgeDao")
 public class HedgeDaoImpl extends BaseDao<TbHedge> implements HedgeDao {

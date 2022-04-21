@@ -1,4 +1,4 @@
-package com.yesee.gov.website.service.accounting.impl;
+package employeeSystem.com.website.accounting.service.impl;
 
 import java.util.Calendar;
 import java.util.List;
@@ -13,15 +13,14 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.yesee.gov.website.dao.accounting.SignCommonDao;
-import com.yesee.gov.website.dao.accounting.SignCommonSetDao;
-import com.yesee.gov.website.exception.AccountingException;
-import com.yesee.gov.website.model.TbEmployees;
-import com.yesee.gov.website.model.accounting.TbSignCommon;
-import com.yesee.gov.website.model.accounting.TbSignCommonSet;
-import com.yesee.gov.website.model.accounting.TbSignRole;
-import com.yesee.gov.website.service.accounting.SignCommonService;
-
+import employeeSystem.com.website.accounting.dao.SignCommonDao;
+import employeeSystem.com.website.accounting.dao.SignCommonSetDao;
+import employeeSystem.com.website.accounting.exception.AccountingException;
+import employeeSystem.com.website.accounting.model.TbSignCommon;
+import employeeSystem.com.website.accounting.model.TbSignCommonSet;
+import employeeSystem.com.website.accounting.model.TbSignRole;
+import employeeSystem.com.website.accounting.service.SignCommonService;
+import employeeSystem.com.website.system.model.TbEmployees;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
@@ -79,7 +78,7 @@ public class SignCommonServiceImpl implements SignCommonService {
 
 		List<TbSignCommon> check = signCommonDao.getSignCommon(signName);
 
-		if (CollectionUtils.isEmpty(check)==false) {
+		if (CollectionUtils.isEmpty(check) == false) {
 			throw new AccountingException("該簽程名稱已存在");
 		}
 

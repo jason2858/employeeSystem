@@ -1,8 +1,8 @@
-package com.yesee.gov.website.service.accounting;
+package employeeSystem.com.website.accounting.service;
 
 import javax.servlet.http.HttpServletRequest;
 
-import com.yesee.gov.website.exception.AccountingException;
+import employeeSystem.com.website.accounting.exception.AccountingException;
 
 public interface ReportService {
 

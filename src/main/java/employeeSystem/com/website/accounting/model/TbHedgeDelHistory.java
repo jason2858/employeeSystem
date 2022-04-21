@@ -1,4 +1,4 @@
-package com.yesee.gov.website.model.accounting;
+package employeeSystem.com.website.accounting.model;
 
 import java.util.Date;
 
@@ -13,12 +13,12 @@ import javax.persistence.Table;
 @Table(name = "tb_hedge_del_history", catalog = "yesee")
 public class TbHedgeDelHistory implements java.io.Serializable {
 
-	@Id	
+	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id", unique = true, nullable = false, length = 20)
 	private Integer id;
-	
-	@Column(name = "hedge_no",  nullable = false, length = 20)
+
+	@Column(name = "hedge_no", nullable = false, length = 20)
 	private String hedgeNo;
 
 	@Column(name = "balance", nullable = false)
@@ -90,6 +90,5 @@ public class TbHedgeDelHistory implements java.io.Serializable {
 	public void setCreateDate(Date createDate) {
 		this.createDate = createDate;
 	}
-	
-	
+
 }

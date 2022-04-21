@@ -1,4 +1,4 @@
-package com.yesee.gov.website.dao.accounting.impl;
+package employeeSystem.com.website.accounting.dao.impl;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -7,9 +7,9 @@ import java.util.Map;
 
 import org.springframework.stereotype.Repository;
 
-import com.yesee.gov.website.dao.accounting.AccountingClosedDao;
-import com.yesee.gov.website.model.accounting.TbAccountingClosed;
-import com.yesee.gov.website.model.accounting.TbAccountingClosedPK;
+import employeeSystem.com.website.accounting.dao.AccountingClosedDao;
+import employeeSystem.com.website.accounting.model.TbAccountingClosed;
+import employeeSystem.com.website.accounting.model.TbAccountingClosedPK;
 
 @Repository("accountingClosedDao")
 public class AccountingClosedDaoImpl extends BaseDao<TbAccountingClosed> implements AccountingClosedDao {

@@ -1,4 +1,4 @@
-package com.yesee.gov.website.model.accounting;
+package employeeSystem.com.website.accounting.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -12,29 +12,29 @@ public class VTbReportHedge implements java.io.Serializable {
 	@Id
 	@Column(name = "voucher_no", length = 12)
 	private String voucherNo;
-	
+
 	@Id
 	@Column(name = "hedge_no", length = 20)
 	private String hedgeNo;
-	
+
 	@Column(name = "type")
 	private String type;
-	
+
 	@Column(name = "project")
 	private String project;
 
 	@Column(name = "item", length = 4)
 	private String item;
-	
+
 	@Column(name = "item_name", length = 20)
 	private String itemName;
-	
+
 	@Column(name = "amount")
 	private Integer amount;
-	
+
 	@Column(name = "company", length = 20)
 	private String company;
-	
+
 	@Column(name = "applicant", length = 20)
 	private String applicant;
 
@@ -49,10 +49,10 @@ public class VTbReportHedge implements java.io.Serializable {
 
 	@Column(name = "directions", length = 200)
 	private String directions;
-	
+
 	@Column(name = "status")
 	private String status;
-	
+
 	@Column(name = "balance")
 	private Integer balance;
 
@@ -200,6 +200,5 @@ public class VTbReportHedge implements java.io.Serializable {
 	public void setBalance(Integer balance) {
 		this.balance = balance;
 	}
-	
-	
+
 }

@@ -1,9 +1,9 @@
-package com.yesee.gov.website.dao.accounting;
+package employeeSystem.com.website.accounting.dao;
 
 import java.util.List;
 import java.util.Map;
 
-import com.yesee.gov.website.model.accounting.TbAccountingClass;
+import employeeSystem.com.website.accounting.model.TbAccountingClass;
 
 public interface AccountingClassDao {
 

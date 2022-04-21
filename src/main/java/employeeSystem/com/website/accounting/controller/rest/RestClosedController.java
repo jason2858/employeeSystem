@@ -1,12 +1,13 @@
-package com.yesee.gov.website.controller.accounting.rest;
+package employeeSystem.com.website.accounting.controller.rest;
+
+import java.awt.PageAttributes.MediaType;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -14,8 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.yesee.gov.website.service.accounting.ClosedService;
-
+import employeeSystem.com.website.accounting.service.ClosedService;
 import net.sf.json.JSONObject;
 
 @RestController

@@ -1,8 +1,8 @@
-package com.yesee.gov.website.dao.accounting;
+package employeeSystem.com.website.accounting.dao;
 
 import java.util.List;
 
-import com.yesee.gov.website.model.accounting.TbVoucherCommon;
+import employeeSystem.com.website.accounting.model.TbVoucherCommon;
 
 public interface VoucherCommonDao {
 

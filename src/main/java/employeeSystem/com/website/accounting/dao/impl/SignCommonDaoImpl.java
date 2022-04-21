@@ -1,4 +1,4 @@
-package com.yesee.gov.website.dao.accounting.impl;
+package employeeSystem.com.website.accounting.dao.impl;
 
 import java.util.HashMap;
 import java.util.List;
@@ -6,8 +6,8 @@ import java.util.Map;
 
 import org.springframework.stereotype.Repository;
 
-import com.yesee.gov.website.dao.accounting.SignCommonDao;
-import com.yesee.gov.website.model.accounting.TbSignCommon;
+import employeeSystem.com.website.accounting.dao.SignCommonDao;
+import employeeSystem.com.website.accounting.model.TbSignCommon;
 
 @Repository("signCommonDao")
 public class SignCommonDaoImpl extends BaseDao<TbSignCommon> implements SignCommonDao {

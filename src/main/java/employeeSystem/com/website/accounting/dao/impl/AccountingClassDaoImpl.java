@@ -1,12 +1,12 @@
-package com.yesee.gov.website.dao.accounting.impl;
+package employeeSystem.com.website.accounting.dao.impl;
 
 import java.util.List;
 import java.util.Map;
 
 import org.springframework.stereotype.Repository;
 
-import com.yesee.gov.website.dao.accounting.AccountingClassDao;
-import com.yesee.gov.website.model.accounting.TbAccountingClass;
+import employeeSystem.com.website.accounting.dao.AccountingClassDao;
+import employeeSystem.com.website.accounting.model.TbAccountingClass;
 
 @Repository("accountingClassDao")
 public class AccountingClassDaoImpl extends BaseDao<TbAccountingClass> implements AccountingClassDao {

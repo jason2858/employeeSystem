@@ -1,4 +1,4 @@
-package com.yesee.gov.website.model.accounting;
+package employeeSystem.com.website.accounting.model;
 
 import java.util.Date;
 
@@ -10,7 +10,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import com.yesee.gov.website.model.TbEmployees;
+import employeeSystem.com.website.system.model.TbEmployees;
 
 @Entity
 @Table(name = "tb_sign_common_set", catalog = "yesee")
@@ -18,19 +18,19 @@ public class TbSignCommonSet implements java.io.Serializable {
 
 	@Id
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "sign_name",referencedColumnName = "sign_name", nullable = false, insertable = true, updatable = true)
+	@JoinColumn(name = "sign_name", referencedColumnName = "sign_name", nullable = false, insertable = true, updatable = true)
 	private TbSignCommon signName;
 
 	@Id
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "role_id", referencedColumnName = "role_id",nullable = false, insertable = true, updatable = true)
+	@JoinColumn(name = "role_id", referencedColumnName = "role_id", nullable = false, insertable = true, updatable = true)
 	private TbSignRole roleId;
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "sign_user",referencedColumnName = "username", nullable = false, insertable = true, updatable = true)
+	@JoinColumn(name = "sign_user", referencedColumnName = "username", nullable = false, insertable = true, updatable = true)
 	private TbEmployees signUser;
 
-	@Column(name = "create_user",  length = 25)
+	@Column(name = "create_user", length = 25)
 	private String createUser;
 
 	@Column(name = "create_date", length = 10)
@@ -38,7 +38,6 @@ public class TbSignCommonSet implements java.io.Serializable {
 
 	public TbSignCommonSet() {
 	}
-
 
 	public TbSignCommonSet(TbSignCommon signName, TbSignRole roleId, TbEmployees signUser, String createUser,
 			Date createDate) {
@@ -49,7 +48,6 @@ public class TbSignCommonSet implements java.io.Serializable {
 		this.createUser = createUser;
 		this.createDate = createDate;
 	}
-
 
 	public TbSignCommon getSignName() {
 		return signName;

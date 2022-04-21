@@ -1,4 +1,4 @@
-package com.yesee.gov.website.controller.accounting;
+package employeeSystem.com.website.accounting.controller;
 
 import java.io.IOException;
 
@@ -18,11 +18,11 @@ public class ASignController {
 			throws ServletException, IOException {
 		return "/accounting_sign";
 	}
-	
+
 	@RequestMapping("/aSign.do")
 	public String jumpAccountASignJSP(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
-		//配合前端頁面跳轉至accounting_sign_check.jsp
+		// 配合前端頁面跳轉至accounting_sign_check.jsp
 //		return "/accounting_aSign";
 		return "/accounting_sign_check";
 	}

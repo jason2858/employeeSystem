@@ -1,4 +1,4 @@
-package com.yesee.gov.website.dao.accounting.impl;
+package employeeSystem.com.website.accounting.dao.impl;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -10,9 +10,9 @@ import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import org.springframework.stereotype.Repository;
 
-import com.yesee.gov.website.dao.accounting.VoucherSignDao;
-import com.yesee.gov.website.model.accounting.TbVoucherSign;
-import com.yesee.gov.website.util.HibernateUtil;
+import employeeSystem.com.website.accounting.dao.VoucherSignDao;
+import employeeSystem.com.website.accounting.model.TbVoucherSign;
+import employeeSystem.com.website.system.util.HibernateUtil;
 
 @Repository("VoucherSignDao")
 public class VoucherSignDaoImpl extends BaseDao<TbVoucherSign> implements VoucherSignDao {

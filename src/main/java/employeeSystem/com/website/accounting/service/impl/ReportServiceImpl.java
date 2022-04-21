@@ -1,4 +1,4 @@
-package com.yesee.gov.website.service.accounting.impl;
+package employeeSystem.com.website.accounting.service.impl;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -12,13 +12,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
-import com.yesee.gov.website.dao.accounting.VReportBalanceDao;
-import com.yesee.gov.website.dao.accounting.VReportHedgeDao;
-import com.yesee.gov.website.exception.AccountingException;
-import com.yesee.gov.website.model.accounting.VTbReportBalance;
-import com.yesee.gov.website.model.accounting.VTbReportHedge;
-import com.yesee.gov.website.service.accounting.ReportService;
-
+import employeeSystem.com.website.accounting.dao.VReportBalanceDao;
+import employeeSystem.com.website.accounting.exception.AccountingException;
+import employeeSystem.com.website.accounting.model.VTbReportBalance;
+import employeeSystem.com.website.accounting.service.ReportService;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
@@ -89,7 +86,7 @@ public class ReportServiceImpl implements ReportService {
 			String predictDateEnd) throws Exception {
 		// check
 		if (StringUtils.isEmpty(company) || StringUtils.isEmpty(item) || StringUtils.isEmpty(creditDateStart)
-				|| StringUtils.isEmpty(creditDateEnd)|| StringUtils.isEmpty(predictDateEnd)) {
+				|| StringUtils.isEmpty(creditDateEnd) || StringUtils.isEmpty(predictDateEnd)) {
 			throw new AccountingException("欄位不能為空值");
 		}
 

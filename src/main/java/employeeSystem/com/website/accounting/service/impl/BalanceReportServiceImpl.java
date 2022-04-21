@@ -1,4 +1,4 @@
-package com.yesee.gov.website.service.accounting.impl;
+package employeeSystem.com.website.accounting.service.impl;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -176,15 +176,15 @@ public class BalanceReportServiceImpl implements BalanceReportService {
 				JSONObject object = new JSONObject();
 				object.put("itemNo", item.get(i));
 				String name = null;
-				if ( aClassItemDao.findById(item.get(i))!=null) {
-					name =aClassItemDao.findById(item.get(i)).getiName();
+				if (aClassItemDao.findById(item.get(i)) != null) {
+					name = aClassItemDao.findById(item.get(i)).getiName();
 				}
-				object.put("itemName",name);
+				object.put("itemName", name);
 				object.put("item", new ArrayList<>());
 				object.put("balance", balance.get(item.get(i)));
 				result.add(object);
 			}
-			
+
 			return result.toString();
 		}
 

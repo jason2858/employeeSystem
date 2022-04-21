@@ -1,12 +1,11 @@
-package com.yesee.gov.website.dao.accounting.impl;
+package employeeSystem.com.website.accounting.dao.impl;
 
 import org.springframework.stereotype.Repository;
 
-import com.yesee.gov.website.dao.accounting.HedgeDelHistoryDao;
-import com.yesee.gov.website.model.accounting.TbHedgeDelHistory;
+import employeeSystem.com.website.accounting.dao.HedgeDelHistoryDao;
+import employeeSystem.com.website.accounting.model.TbHedgeDelHistory;
 
 @Repository("HedgeDelHistoryDao")
 public class HedgeDelHistoryDaoImpl extends BaseDao<TbHedgeDelHistory> implements HedgeDelHistoryDao {
-
 
 }
